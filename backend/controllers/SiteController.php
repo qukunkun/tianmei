@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use backend\models\Menu;
 
 /**
  * Site controller
@@ -55,7 +56,14 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $user_id=Yii::$app->user->identity->getId();
+        $user_info = Yii::$app->authManager->getRolesByUser($user_id);
+        $menu = new Menu();
+        $menu = $menu->getLeftMenuList();
+        return $this->render('index',[
+            'menu' => $menu,
+            'user_info' => key($user_info)
+        ]);
     }
 
     public function actionLogin()
