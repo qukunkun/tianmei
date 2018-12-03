@@ -10,5 +10,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>This is the About page. You may modify the following file to customize its content:</p>
 
-    <code><?= __FILE__ ?></code>
+    <select id="category" class="form-control selectpicker">
+
+        <option value="">请选择</option>
+        <option value="">Ketchup</option>
+        <option value="">Relish</option>
+
+    </select>
 </div>

@@ -21,7 +21,7 @@
         "mdmsoft/yii2-admin": "~2.0",
         "FortAwesome/Font-Awesome": "*",
         "leandrogehlen/yii2-treegrid": "*",
-        "snapappointments/bootstrap-select": "^1.13"
+        "snapappointments/bootstrap-select": "1.12.4"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

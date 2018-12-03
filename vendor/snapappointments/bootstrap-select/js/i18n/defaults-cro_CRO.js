@@ -1,7 +1,7 @@
 /*
  * Translated default messages for bootstrap-select.
- * Locale: HR (Croatia)
- * Region: HR (Croatia)
+ * Locale: CRO (Croatia)
+ * Region: CRO (Croatia)
  */
 (function ($) {
   $.fn.selectpicker.defaults = {

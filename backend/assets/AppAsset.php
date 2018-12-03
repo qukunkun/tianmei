@@ -21,6 +21,8 @@ class AppAsset extends AssetBundle
 //        'css/site.css',
         'statics/css/nifty.css',
         'statics/css/style.min.css',
+        'statics/css/bootstrap-select.css',
+
     ];
     public $js = [
     ];
@@ -28,8 +30,9 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'backend\assets\FontAwesomeAsset',
+        'backend\assets\BootstrapSelectAsset',
     ];
-    public $jsOptions = [
-        'position' => \yii\web\View::POS_HEAD,
-    ];
+//    public $jsOptions = [
+//        'position' => \yii\web\View::POS_HEAD,
+//    ];
 }
