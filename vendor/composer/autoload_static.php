@@ -27,6 +27,10 @@ class ComposerStaticInit5cf978d3085540243e4ce6e2e99d6006
         array (
             'mdm\\admin\\' => 10,
         ),
+        'l' => 
+        array (
+            'leandrogehlen\\treegrid\\' => 23,
+        ),
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
@@ -73,6 +77,10 @@ class ComposerStaticInit5cf978d3085540243e4ce6e2e99d6006
         'mdm\\admin\\' => 
         array (
             0 => __DIR__ . '/..' . '/mdmsoft/yii2-admin',
+        ),
+        'leandrogehlen\\treegrid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leandrogehlen/yii2-treegrid',
         ),
         'cebe\\markdown\\' => 
         array (

@@ -66,4 +66,13 @@ return array (
       '@mdm/admin' => $vendorDir . '/mdmsoft/yii2-admin',
     ),
   ),
+  'leandrogehlen/yii2-treegrid' => 
+  array (
+    'name' => 'leandrogehlen/yii2-treegrid',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@leandrogehlen/treegrid' => $vendorDir . '/leandrogehlen/yii2-treegrid',
+    ),
+  ),
 );
