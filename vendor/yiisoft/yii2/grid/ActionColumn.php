@@ -211,6 +211,9 @@ class ActionColumn extends Column
      */
     protected function renderDataCellContent($model, $key, $index)
     {
+        if( isset($model->id) ){
+            $key = $model->id;
+        }
         return preg_replace_callback('/\\{([\w\-\/]+)\\}/', function ($matches) use ($model, $key, $index) {
             $name = $matches[1];
 
