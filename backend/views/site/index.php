@@ -263,6 +263,8 @@ $this->title = 'tianmei';
     <!--右侧边栏结束-->
 
 </div>
+<?=Html::jsFile('@web/assets/9fc4e263/jquery.js')?>
+<?//=Html::cssFile('@web/statics/css/nifty.css')?>
 
 <?=Html::jsFile('@web/statics/js/jquery.min.js')?>
 <?=Html::jsFile('@web/statics/js/bootstrap.min.js')?>

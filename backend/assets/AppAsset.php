@@ -18,20 +18,22 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'css/site.css',
         'statics/css/nifty.css',
         'statics/css/style.min.css'
-
     ];
+
     public $js = [
+        'statics/js/aa.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
+//        'yii\web\YiiAsset',  //加载jquery.js & yii.js；外框架要求先加载，chosen插件要求侯后加载。 此处屏蔽，在具体页面中添加
         'yii\bootstrap\BootstrapAsset',
         'backend\assets\FontAwesomeAsset',
-//        'backend\assets\BootstrapSelectAsset'
+        'backend\assets\ChosenAsset',
     ];
-    public $jsOptions = [
-        'position' => \yii\web\View::POS_HEAD,
-    ];
+
+    //设置把js文件在顶部加载
+//    public $jsOptions = [
+//        'position' => \yii\web\View::POS_HEAD,
+//    ];
 }
