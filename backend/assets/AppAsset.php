@@ -29,7 +29,7 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'backend\assets\FontAwesomeAsset',
-        'backend\assets\BootstrapSelectAsset'
+//        'backend\assets\BootstrapSelectAsset'
     ];
     public $jsOptions = [
         'position' => \yii\web\View::POS_HEAD,
