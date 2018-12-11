@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use app\models\Y;
 use app\models\Goods;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -24,7 +25,7 @@ class GoodsController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['POST','GET'],
                 ],
             ],
         ];
@@ -65,17 +66,22 @@ class GoodsController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Goods();
+        $post_data = Y::Q()->post();
+        if( !empty($post_data)){
+            $model = new Goods();
+            $model->category_id = $post_data['category_id'];
+            $model->goods_code = $post_data['goods_code'];
+            $model->goods_name = $post_data['goods_name'];
+            $model->goods_number = $post_data['goods_number'];
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
-
         $tree = $this->getTree();
         $data['category_info'] = $this->getSelect($tree);
 
         return $this->render('create', [
-            'model' => $model,
             'data'=> $data,
         ]);
     }

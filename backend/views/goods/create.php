@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="goods-form">
         <form id="category" action="/tianmei/backend/web/goods/create" method="post">
             <div class="form-group">
-                <label class="control-label">类别ID</label>
-                <select id="category" name="Goods[id]" data-placeholder="选择类别" class="form-control chosen-select" tabindex="1">
+                <label class="control-label">类别</label>
+                <select id="category_id" name="category_id" data-placeholder="选择类别" class="form-control chosen-select" tabindex="1">
                     <option value=""></option>
                     <?PHP foreach( $data['category_info'] as $key=>$value): ?>
                         <option value="<?= $value['id']?>"><?= $value['description'] ?></option>

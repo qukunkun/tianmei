@@ -27,13 +27,14 @@ return [
         'allowActions' => [
             //这里是允许访问的action
             //controller/action
-//            '*'
+            '*'
         ]
     ],
 
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'enableCsrfValidation' => false,
         ],
 
         'session' => [
